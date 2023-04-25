@@ -1,6 +1,6 @@
 ---
 title: "R In-Class Exercise - Functions"
-author: "Your Name Here"
+author: "Hannah Loder"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 format:
   html:
