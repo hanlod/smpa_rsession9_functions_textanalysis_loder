@@ -100,9 +100,14 @@ filter_flights_by_origin("LGA")
 ```{r}
 
 
+count_by_airline <- function(airportname){
+  result <- flights %>% 
+    filter(origin == airportname) %>% 
+    count(carrier, sort = TRUE)
+  return(result)
+}
 
-
-
+count_by_airline("EWR")
 
 ```
 
