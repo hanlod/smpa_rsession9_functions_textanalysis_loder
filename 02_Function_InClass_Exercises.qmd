@@ -28,8 +28,12 @@ options(tigris_class = "sf")
 ```{r}
 
 
+sum2numbers_function <- function(number, othernumber){
+  result <- number + othernumber
+  return(result)
+}
 
-
+sum2numbers_function(4,6)
 
 ```
 
@@ -37,10 +41,14 @@ options(tigris_class = "sf")
 
 ```{r}
 
+numberlist_vector <- c(4,5,6,7,3,6,8,4)
 
+meanlist_function <- function(numberlist){
+  result <- mean(numberlist)
+  return(result)
+}
 
-
-
+meanlist_function(numberlist_vector)
 
 ```
 
@@ -50,9 +58,12 @@ options(tigris_class = "sf")
 ```{r}
 
 
+meansentence_function <- function(numberlist){
+  result <- paste0("The mean is", " ", mean(numberlist), ".")
+  return(result)
+}
 
-
-
+meansentence_function(numberlist_vector)
 ```
 
 For these next two questions, we'll use the `flights` dataset from the package `nycflights13`. It contains records of individual airline flights departing at New York's three metro airports, JFK, LaGuardia (LGA) and Newark (EWR). Run the following chunk to load the data. (Make sure you've actually installed the package, of course.)
@@ -69,9 +80,13 @@ head(flights)
 ```{r}
 
 
+filter_flights_by_origin <- function(airportname){
+  result <- flights %>% 
+    filter(origin == airportname)
+  return(result)
+}
 
-
-
+filter_flights_by_origin("LGA")
 
 
 ```
